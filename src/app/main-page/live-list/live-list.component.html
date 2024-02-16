@@ -1,0 +1,95 @@
+<div class="padding-20-percent live-bg" *ngIf="orderListData">
+  <div class="live-main">
+    <div class="live-list-title">
+      바로견적요청<br>
+      <span>실시간 신청 리스트</span>
+    </div>
+    <ngb-carousel [interval]="4000" [showNavigationArrows]="false">
+      <ng-template ngbSlide *ngFor="let orderData of orderListData">
+        <div class="flex-nowrap option-flex-center-only-p live-box-padding">
+          <div class="live-box-main content-live-1">
+            <div class="new-div">
+              NEW
+            </div>
+            <div class="live-box">
+              <div>
+                <span class="live-title">{{orderData[0].ORDER_TITLE}} </span>
+                <span class="live-sub-title">{{orderData[0].ORDER_SUB_TITLE}}</span>
+              </div>
+              <div class="live-order-date-title">
+                청소 예정일
+              </div>
+              <div class="live-order-date-box">
+                {{orderData[0].ORDER_DATE}}
+              </div>
+              <div class="live-default-box">
+                <img src="/assets/img/main/py-icon.png">
+                <span class="live-default-title">평수</span>
+                <span class="live-default-body">{{orderData[0].ORDER_DEFAULT}}</span>
+              </div>
+              <div class="live-default-box">
+                <img src="/assets/img/main/locale-icon.png">
+                <span class="live-default-title">지역</span>
+                <span class="live-default-body">{{orderData[0].ORDER_LOCALE}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="live-box-main content-live-2">
+            <div class="live-box">
+              <div class="new-div">
+                NEW
+              </div>
+              <div>
+                <span class="live-title">{{orderData[1].ORDER_TITLE}} </span>
+                <span class="live-sub-title">{{orderData[1].ORDER_SUB_TITLE}}</span>
+              </div>
+              <div class="live-order-date-title">
+                청소 예정일
+              </div>
+              <div class="live-order-date-box">
+                {{orderData[1].ORDER_DATE}}
+              </div>
+              <div class="live-default-box">
+                <img src="/assets/img/main/py-icon.png">
+                <span class="live-default-title">평수</span>
+                <span class="live-default-body">{{orderData[1].ORDER_DEFAULT}}</span>
+              </div>
+              <div class="live-default-box">
+                <img src="/assets/img/main/locale-icon.png">
+                <span class="live-default-title">지역</span>
+                <span class="live-default-body">{{orderData[1].ORDER_LOCALE}}</span>
+              </div>
+            </div>
+          </div>
+          <div class="live-box-main content-live-3">
+            <div class="live-box">
+              <div class="new-div">
+                NEW
+              </div>
+              <div>
+                <span class="live-title">{{orderData[2].ORDER_TITLE}} </span>
+                <span class="live-sub-title">{{orderData[2].ORDER_SUB_TITLE}}</span>
+              </div>
+              <div class="live-order-date-title">
+                청소 예정일
+              </div>
+              <div class="live-order-date-box">
+                {{orderData[2].ORDER_DATE}}
+              </div>
+              <div class="live-default-box">
+                <img src="/assets/img/main/py-icon.png">
+                <span class="live-default-title">평수</span>
+                <span class="live-default-body">{{orderData[2].ORDER_DEFAULT}}</span>
+              </div>
+              <div class="live-default-box">
+                <img src="/assets/img/main/locale-icon.png">
+                <span class="live-default-title">지역</span>
+                <span class="live-default-body">{{orderData[2].ORDER_LOCALE}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

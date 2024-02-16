@@ -1,0 +1,18 @@
+<div class="padding-20-percent qa-bg">
+  <div class="main-qa-title">
+    고객님들이 궁굼해하시는<br>
+    <span>자주 묻는 질문</span>
+  </div>
+  <div class="qa-table">
+    <ngb-accordion [closeOthers]="true">
+      <ngb-panel *ngFor="let qaData of qaData">
+        <ng-template ngbPanelTitle  class="qa-header">
+          <div>Q. {{qaData.QA_TITLE}}</div>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          <div [innerHTML]="qaData.QA_DESC" style="white-space: pre-wrap"></div>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="padding-20-percent pot-bg">
+  <div class="pot-title">
+    작은 변화가 만든 큰 차이<br>
+    <span>업체 포트폴리오</span>
+  </div>
+  <div class="flex-default option-flex-center after-box-main">
+    <div *ngFor="let after of afterData;" class="after-main" (click)="moveAfter(after)">
+      <img [src]="after.MAIN_IMG" class="after-img">
+      <div class="after-desc-box">
+        <div class="after-main-box">{{after.TITLE}}</div>
+        <div class="after-shop">{{after.SHOP_NAME}}</div>
+        <div class="after-sub-text">{{after.SUB_TITLE}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="padding-20-percent">
+  <div class="pot-title">
+    전문가의 청소 꿀TIP<br>
+    <span>에디터`S 초이스</span>
+  </div>
+
+  <div class="flex-default option-flex-center after-box-main">
+    <div *ngFor="let data of editorData;" class="after-main" (click)="moveEditor(data)">
+      <img [src]="data.EDITOR_IMG" class="editor-img">
+      <div class="editor-title">{{data.EDITOR_TITLE}}</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+.privacy-scroll {
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.reviews-sub-title {
+  color: #278eff;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: -0.75px;
+  text-align: center;
+}
+
+.review-title {
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.46px;
+  text-align: center;
+  color: #191f28;
+}
+
+.review-point {
+  padding: 25px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.star {
+  position: relative;
+  display: inline-block;
+  color: #d3d3d3;
+
+  img {
+    width: 40px;
+  }
+
+  .half {
+    position: absolute;
+    display: inline-block;
+    overflow: hidden;
+    left: 0;
+    top: -1px;
+  }
+}
+
+.reviews-text-sub-title {
+  color: #278eff;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: -0.75px;
+  text-align: center;
+  padding-top: 25px;
+}
+
+.reviews-text-title {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: -0.32px;
+  text-align: center;
+  color: #5f5f5f;
+  padding: 10px 0 25px 0;
+}
+
+.review-text {
+  textarea {
+    border-radius: 11.5px;
+    background-color: #eff1f4;
+    border: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  textarea::placeholder {
+    color: #b1b9c1;
+  }
+}
+
+.reviews-button {
+  padding: 25px;
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    height: 45px;
+    border-radius: 24px;
+    background-color: #52a4ff;
+    color: white;
+    font-size: 16px;
+    border: 0;
+    font-weight: 500;
+  }
+}

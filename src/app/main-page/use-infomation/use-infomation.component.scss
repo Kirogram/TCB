@@ -1,0 +1,38 @@
+
+.premium-bg {
+  width: 100%;
+  max-width: 500px;
+  height: 100px;
+  border-radius: 20px;
+  background-image: url("https://cleanbox.shop/fileDownLoad/notice/1651001612113shop-join.jpg");
+
+  .premium-text {
+    padding-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+
+    .text-dot {
+      font-size: 14px;
+      font-weight: bold;
+      text-emphasis-style: dot;
+      text-emphasis-position: over left;
+      -webkit-text-emphasis-style: dot;
+      -webkit-text-emphasis-position: over;
+    }
+  }
+
+  .premium-btn {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px;
+
+    button {
+      background: white;
+      border: 0;
+      border-radius: 10px;
+      padding: 5px 20px;
+      font-weight: bold;
+    }
+  }
+}

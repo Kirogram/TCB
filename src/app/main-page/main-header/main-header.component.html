@@ -1,0 +1,49 @@
+<div class="main-header">
+  <ngb-carousel [interval]="5000" [showNavigationArrows]="false" [animation]="false">
+    <ng-template ngbSlide *ngFor="let data of data">
+      <div class="back-img">
+        <div class="padding-20-percent">
+          <div class="flex-nowrap">
+            <div>
+              <div class="text-slide-animation">
+                <div class="mh-title">
+                  {{data.title1}}<br>
+                  {{data.title2}}<br>
+                </div>
+                <div class="flex-nowrap">
+                  <div class="mh-box">
+                    <div class="mh-sub-title">
+                      청소업체 비교 플랫폼
+                    </div>
+                    <div class="mh-brand">
+                      더클린박스
+                    </div>
+                    <div class="mh-desc">
+                      가입/인증없이 모든 정보를<br>
+                      바로 확인하실 수 있습니다
+                    </div>
+                  </div>
+                  <div class="mh-img">
+                    <img [src]="data.img">
+                  </div>
+                </div>
+              </div>
+              <div class="mh-btn-box">
+                <div class="wrapper">
+                  <button routerLink="/homeCleaning" class="glass-body smt-search">
+                    업체 정보 바로 확인하기
+                  </button>
+                  <div class="border"></div>
+                  <div class="main-element"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mh-img-pc">
+              <img [src]="data.img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>

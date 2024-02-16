@@ -1,0 +1,121 @@
+<div style="background: #f3f4f5">
+  <div class="padding-20-percent text-align-center">
+    <div class="main-title-box">
+      <span class="half_background">청소 조건</span> 선택
+    </div>
+    <div style="font-size: 12px;padding-bottom: 20px">
+      딱 맞는 업체 확인을 위한 조건선택 입니다<br>
+      업체 확인을 위해 간단하게 옵션 선택 부탁드립니다
+    </div>
+  </div>
+
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box">
+      <div class="cost-menu-box" id="cleaningDiv">
+        <div class="cost-menu-header">
+          제품 선택
+        </div>
+        <div class="cost-menu-body">
+          청소를 원하시는 제품을 선택해 주세요
+        </div>
+      </div>
+      <div class="flex-default option-flex-center">
+        <div class="clean-option-body option-flex-center" [ngClass]="{'select-line':!selectProduct}">
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="changeItem('에어컨')"
+                 [ngClass]="{'option-select':selectProduct==='에어컨'}">
+              에어컨
+            </div>
+          </div>
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="changeItem('세탁기')"
+                 [ngClass]="{'option-select':selectProduct==='세탁기'}">
+              세탁기
+            </div>
+          </div>
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="changeItem('매트리스')"
+                 [ngClass]="{'option-select':selectProduct==='매트리스'}">
+              매트리스
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box">
+      <div class="cost-menu-box" id="localeDiv">
+        <div class="cost-menu-header">
+          지역/옵션
+        </div>
+        <div class="cost-menu-body">
+          원하시는 청소 지역과 옵션을 선택해 주세요
+        </div>
+      </div>
+      <div class="size-option-header">
+        <div class="size-option-box">
+          <select [(ngModel)]="localeValue" class="size-option-locale-select" (ngModelChange)="localeDetail()"
+                  [ngClass]="{'emphasis-border-red':selectProduct!=null&&localeValue==null,'close-box':selectProduct==null}">
+            <option [ngValue]="null" disabled selected>1.지역 선택</option>
+            <option *ngFor="let d of localeData" [ngValue]="d">{{d.name}}</option>
+          </select>
+          <select [(ngModel)]="localeDetailValue" class="size-option-locale-select"
+                  [disabled]="localeValue==null"
+                  [ngClass]="{'emphasis-border-red':localeDetailValue==null&&localeValue!=null,'close-box':localeDetailValue==null&&localeValue==null}">
+            <option [ngValue]="null" disabled selected>2.세부 선택</option>
+            <option *ngFor="let d of localeDetailData" [ngValue]="d">{{d.name}}</option>
+          </select>
+        </div>
+        <div class="size-option-box">
+          <select [(ngModel)]="itemMainValue" class="size-option-select" (ngModelChange)="subItem(itemMainValue)"
+                  [disabled]="localeDetailValue==null"
+                  [ngClass]="{'emphasis-border-red':localeDetailValue!=null&&itemMainValue==null,'close-box':localeDetailValue==null&&itemMainValue==null}">
+            <option [ngValue]="null" disabled selected>3.옵션 선택</option>
+            <option *ngFor="let d of mainItemList" [ngValue]="d">{{d.name}}</option>
+          </select>
+        </div>
+        <div class="flex-default option-flex-center" style="position: relative;padding: 30px 0;">
+          <div *ngIf="subItemList.length>0" class="detail-option-header">
+            4. 제품 종류를 선택해주세요
+          </div>
+          <div *ngFor="let subData of subItemList" class="option-sub">
+            <div class="option-main" (click)="optionClick(subData)"
+                 [ngClass]="{'active':optionSelected === subData , 'non-active':optionSelected && optionSelected !== subData}">
+              <img [src]="subData.SUB_OPTION_IMG" style="width: 100%;height : calc(100% - 20px);">
+              <div style="text-align: center">{{subData.SUB_OPTION_NAME}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box">
+      <div class="cost-menu-box" id="dateDiv">
+        <div class="cost-menu-header">
+          청소 예정일
+        </div>
+        <div class="cost-menu-body">
+          청소 희망일을 달력에서 눌러 주세요
+        </div>
+      </div>
+      <div class="flex-default option-flex-center">
+        <div class="cleaning-date-header flex-default option-flex-center"
+             [ngClass]="{'emphasis-border-red':optionSelected!=null && model ==null,'close-box':optionSelected==null}">
+          <input class="form-control" name="mydate" placeholder="Select a date" style="display: none"
+                 angular-mydatepicker #dp="angular-mydatepicker" locale="ko-kr"
+                 [(ngModel)]="model" [options]="myDpOptions"/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="open-popup-header">
+    <button class="open-popup-body" (click)="openPrice()">견적 확인하기</button>
+  </div>
+</div>

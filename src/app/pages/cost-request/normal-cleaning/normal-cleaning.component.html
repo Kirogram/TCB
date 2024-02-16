@@ -1,0 +1,125 @@
+<div style="background: #f3f4f5">
+  <div class="padding-20-percent text-align-center">
+    <div class="main-title-box">
+      <span class="half_background">특수 청소</span> 신청
+    </div>
+    <div style="font-size: 12px;padding-bottom: 20px">
+      특수 청소 신청은 담당자가 직접 내용을 확인후<br>
+      최적의 업체들이 고객님에게 연락 할 수 있도록<br>
+      업무를 처리하고 있습니다
+    </div>
+  </div>
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box">
+      <div class="cost-menu-box" id="cleaningDiv">
+        <div class="cost-menu-header">
+          장소 선택
+        </div>
+        <div class="cost-menu-body">
+          원하시는 청소 장소를 선택해 주세요
+        </div>
+      </div>
+      <div class="flex-default option-flex-center">
+        <div class="clean-option-body option-flex-center" [ngClass]="{'select-line':!cleanOption}">
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="selectCleaning('정기청소')"
+                 [ngClass]="{'option-select':cleanOption==='정기청소'}">
+              정기청소
+            </div>
+          </div>
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="selectCleaning('부분청소')"
+                 [ngClass]="{'option-select':cleanOption==='부분청소'}">
+              부분청소
+            </div>
+          </div>
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="selectCleaning('소독/방역')"
+                 [ngClass]="{'option-select':cleanOption==='소독/방역'}">
+              소독/방역
+            </div>
+          </div>
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="selectCleaning('화재복구')"
+                 [ngClass]="{'option-select':cleanOption==='화재복구'}">
+              화재복구
+            </div>
+          </div>
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="selectCleaning('폐기물')"
+                 [ngClass]="{'option-select':cleanOption==='폐기물'}">
+              폐기물
+            </div>
+          </div>
+          <div class="option-button-header">
+            <div class="option-button-body" (click)="selectCleaning('기타')"
+                 [ngClass]="{'option-select':cleanOption==='기타'}">
+              기타
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box">
+      <div class="cost-menu-box">
+        <div class="cost-menu-header">
+          지역 선택
+        </div>
+        <div class="cost-menu-body">
+          원하시는 청소 지역을 선택해 주세요
+        </div>
+      </div>
+      <div class="size-option-header">
+        <div class="size-option-box">
+          <select [(ngModel)]="localeValue" class="size-option-locale-select" (ngModelChange)="localeDetail()"
+                  [ngClass]="{'emphasis-border-red':cleanOption!==null&&localeValue==null,'close-box':cleanOption==null}">
+            <option [ngValue]="null" disabled selected>1.지역 선택</option>
+            <option *ngFor="let d of localeData" [ngValue]="d">{{d.name}}</option>
+          </select>
+          <select [(ngModel)]="localeDetailValue" class="size-option-locale-select"
+                  [disabled]="localeValue==null"
+                  [ngClass]="{'emphasis-border-red':localeDetailValue==null&&localeValue!=null,'close-box':localeDetailValue==null&&localeValue==null}">
+            <option [ngValue]="null" disabled selected>2.세부 선택</option>
+            <option *ngFor="let d of localeDetailData" [ngValue]="d">{{d.name}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cost-menu-box">
+    <div class="cost-menu-header">
+      추가 내용
+    </div>
+    <div class="desc-default-padding">
+      현장 상황을 간략하게 설명해주시면<br>
+      더 빠르고 확실한 견적상담이 가능합니다
+    </div>
+  </div>
+  <div class="flex-default option-flex-center">
+    <textarea class="desc-area" [(ngModel)]="etcText"
+              [disabled]="localeDetailValue==null"
+              [ngClass]="{'emphasis-border-red':etcText==null&&localeDetailValue!=null&&localeValue!=null,'close-box':localeDetailValue==null&&localeValue==null}"></textarea>
+  </div>
+  <div class="open-popup-header">
+    <button class="open-popup-body" (click)="checkUser()">문의 요청</button>
+  </div>
+</div>
+
+<div *ngIf="userLogin===true">
+  <div class="default-service-popup-main">
+    <div class="default-service-popup">
+      <div class="default-service-popup-header">
+        <div class="default-service-popup-header-close" (click)="userLogin=false">
+          <img src="/assets/img/main/btn-close.png">
+        </div>
+      </div>
+      <div class="default-service-popup-body">
+        <div class="default-service-popup-body-box">
+          <app-popup-login (close)="loginClose()" (userSession)="userSession()"></app-popup-login>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

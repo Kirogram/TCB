@@ -1,0 +1,77 @@
+.cleaning-body {
+
+
+  @media (min-width: 1025px) {
+    width: 25%;
+    padding: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 50%;
+    padding: 10px;
+  }
+
+}
+
+.cleaning-icon-img {
+  width: 64px;
+  height: 76px;
+  padding: 10px 0;
+}
+
+.cleaning-item {
+  background: #f3f4f5;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+
+  .cleaning-title {
+    padding: 10px 0;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+}
+
+.cost-header {
+  background: #4383c4;
+  padding: 10px;
+
+  .cost-header-box {
+    text-align: center;
+    padding: 10px;
+
+    .cost-header-box-img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .cost-desc-title {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .cost-desc-body {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+.features-list {
+  padding: 0 10px;
+  list-style-type: none;
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.features-list li {
+  padding: 5px 0;
+}
+
+.features-list li:not(:last-of-type) {
+  border-bottom: 1px solid #ccc;
+}

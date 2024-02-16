@@ -1,0 +1,49 @@
+<div class="main-menu-body">
+  <div class="padding-20-percent">
+    <div class="flex-default option-flex-center-only-mobile">
+      <div class="flex-5">
+        <section waIntersectionObserver waIntersectionThreshold="0">
+          <div class="desc-img-main" (waIntersectionObservee)="onIntersection($event)"
+               [ngClass]="{'content-view':changeCss==true}">
+            <img src="https://cleanbox.shop/fileDownLoad/notice/1668788951735제목 없음-1-min.png">
+          </div>
+        </section>
+      </div>
+      <div class="flex-5 main-text-mobile-width">
+        <section waIntersectionObserver waIntersectionThreshold="0">
+          <div [ngClass]="{'text-slide-animation':changeCss==true}">
+            <div class="main-menu-title">
+              검증된 전문업체들만<br>
+              직접 보고 비교해보세요
+            </div>
+            <div class="desc-text1">
+              더클린박스의 믿을 수 있는 업체 검증 시스템!
+            </div>
+            <div class="desc-text3 flex-default option-flex-center-only-mobile">
+              <div class="desc-text2">
+                <div>
+                  <img src="/assets/img/option/check.png" class="check-img">예상 비용 바로확인
+                </div>
+                <div>
+                  <img src="/assets/img/option/check.png" class="check-img">업체 후기 바로확인
+                </div>
+                <div>
+                  <img src="/assets/img/option/check.png" class="check-img">후불제 안심청소 서비스
+                </div>
+                <div>
+                  <img src="/assets/img/option/check.png" class="check-img">세부정보부터 포트폴리오까지
+                </div>
+                <div>
+                  <img src="/assets/img/option/check.png" class="check-img">가입없는 업체 바로확인 서비스
+                </div>
+              </div>
+            </div>
+            <div class="text-point">
+              더이상 가짜 청소업체에 속지마세요!
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

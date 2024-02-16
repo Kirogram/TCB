@@ -1,0 +1,49 @@
+<div class="padding-20-percent" *ngIf="shopData">
+  <div class="main-shop-title">
+    고객님들의 인정을 받은<br>
+    <span>베스트 업체</span>
+  </div>
+
+  <div class="flex-nowrap option-flex-center-only-pc main-shop-padding">
+    <div *ngFor="let shopData of shopData" class="main-shop-box">
+      <div class="shop-header-img">
+        <img [src]="shopData.SHOP_LOGO" class="shop-header-logo">
+      </div>
+      <div class="shop-desc-box">
+        <div class="shop-title">{{shopData.SHOP_NAME}}</div>
+        <div class="flex-nowrap">
+          <div class="star-set">
+            <ng-template #t let-fill="fill">
+          <span class="star" [class.full]="fill === 100"><img src="/assets/img/icon/star1.png" alt="">
+          <span class="half" [style.width.%]="fill"><img src="/assets/img/icon/star2.png" alt=""></span>
+          </span>
+            </ng-template>
+            <ngb-rating [(rate)]="shopData.SHOP_POINT" [starTemplate]="t" [readonly]="true"
+                        [max]="5"></ngb-rating>
+          </div>
+          <div class="shop-point">{{shopData.SHOP_POINT}}</div>
+          <div class="order-count">· {{shopData.ORDER_COUNT}}</div>
+          <div class="shop-address">· {{shopData.SHOP_ADDRESS}}</div>
+        </div>
+        <div class="tag-box flex-nowrap">
+          <div class="tag-main" *ngFor="let data of shopData.SHOP_TAG">{{data}}</div>
+        </div>
+        <div class="shop-desc-text">
+          <span [innerHTML]="shopData.SHOP_SHORT_DESC"></span>
+        </div>
+        <div class="flex-nowrap badge-box-main">
+          <div *ngFor="let pot of shopData.SHOP_BADGE">
+            <div class="badge-main">
+              <img src="/assets/img/badge/{{pot}}.png">
+              <div>{{pot}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="flex-nowrap shop-event-box">
+          <div class="shop-event-title">이벤트</div>
+          <div class="shop-event-desc">{{shopData.SHOP_EVENT}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

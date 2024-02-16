@@ -1,0 +1,211 @@
+<div class="select-option-main">
+  <div class="padding-20-percent">
+    <div class="flex-default option-flex-center">
+      <div class="title-box">
+        <div class="custom-title-box">
+          청소 조건 선택
+        </div>
+        <div class="custom-desc-box">
+          가입/인증 필요없이 조건만 선택하시면<br>
+          바로 업체정보와 가격을 확인하실 수 있습니다
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box" [ngClass]="{'select-line':!cleanOption}">
+      <div class="cleaning-menu-box" id="cleaningDiv">
+        <div class="cleaning-menu-header">
+          청소선택
+        </div>
+        <div class="cleaning-menu-body">
+          원하시는 청소 분야를 선택해주세요
+        </div>
+      </div>
+      <div class="clean-option-body">
+        <div class="option-service-button-body" (click)="selectCleaning('입주청소')"
+             [ngClass]="{'option-select':cleanOption==='입주청소'}">
+          <img src="/assets/img/etc/a-btn.png" class="cleaning-btn" *ngIf="cleanOption!=='입주청소'">
+          <img src="/assets/img/etc/b-btn.png" class="cleaning-btn" *ngIf="cleanOption==='입주청소'">
+          입주청소 <span>신축건물 첫 입주</span>
+        </div>
+        <div class="option-service-button-body" (click)="selectCleaning('이사청소')"
+             [ngClass]="{'option-select':cleanOption==='이사청소'}">
+          <img src="/assets/img/etc/a-btn.png" class="cleaning-btn" *ngIf="cleanOption!=='이사청소'">
+          <img src="/assets/img/etc/b-btn.png" class="cleaning-btn" *ngIf="cleanOption==='이사청소'">
+          이사청소 <span>전 거주자가 있었을 경우</span>
+        </div>
+        <div class="option-service-button-body" (click)="selectCleaning('거주청소')"
+             [ngClass]="{'option-select':cleanOption==='거주청소'}">
+          <img src="/assets/img/etc/a-btn.png" class="cleaning-btn" *ngIf="cleanOption!=='거주청소'">
+          <img src="/assets/img/etc/b-btn.png" class="cleaning-btn" *ngIf="cleanOption==='거주청소'">
+          거주청소 <span>이사짐이 들어온 경우</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box" [ngClass]="{'close-box':!cleanOption,'select-line':cleanOption && !cleanProduct}">
+      <div class="cleaning-menu-box" id="placeDiv">
+        <div class="cleaning-menu-header">
+          청소장소
+        </div>
+        <div class="cleaning-menu-body">
+          청소 받으실 장소를 선택해주세요
+        </div>
+      </div>
+      <div class="flex-default option-flex-center padding-bottom-30">
+        <div class="clean-option-body option-flex-center flex-default">
+          <div class="option-button-body" (click)="selectProduct('아파트')"
+               [ngClass]="{'option-product':cleanProduct==='아파트'}">
+            <div class="option-btn-icon">
+              <img src="/assets/img/etc/a-btn.png" class="option-btn" *ngIf="cleanProduct!=='아파트'">
+              <img src="/assets/img/etc/b-btn.png" class="option-btn" *ngIf="cleanProduct==='아파트'">
+            </div>
+            아파트
+          </div>
+          <div class="option-button-body" (click)="selectProduct('빌라')"
+               [ngClass]="{'option-product':cleanProduct==='빌라'}">
+            <div class="option-btn-icon">
+              <img src="/assets/img/etc/a-btn.png" class="option-btn" *ngIf="cleanProduct!=='빌라'">
+              <img src="/assets/img/etc/b-btn.png" class="option-btn" *ngIf="cleanProduct==='빌라'">
+            </div>
+            빌라
+          </div>
+          <div class="option-button-body" (click)="selectProduct('주택')"
+               [ngClass]="{'option-product':cleanProduct==='주택'}">
+            <div class="option-btn-icon">
+              <img src="/assets/img/etc/a-btn.png" class="option-btn" *ngIf="cleanProduct!=='주택'">
+              <img src="/assets/img/etc/b-btn.png" class="option-btn" *ngIf="cleanProduct==='주택'">
+            </div>
+            전원주택
+          </div>
+          <div class="option-button-body" (click)="selectProduct('원룸')"
+               [ngClass]="{'option-product':cleanProduct==='원룸'}">
+            <div class="option-btn-icon">
+              <img src="/assets/img/etc/a-btn.png" class="option-btn" *ngIf="cleanProduct!=='원룸'">
+              <img src="/assets/img/etc/b-btn.png" class="option-btn" *ngIf="cleanProduct==='원룸'">
+            </div>
+            원룸
+          </div>
+          <div class="option-button-body" (click)="selectProduct('오피스텔')"
+               [ngClass]="{'option-product':cleanProduct==='오피스텔'}">
+            <div class="option-btn-icon">
+              <img src="/assets/img/etc/a-btn.png" class="option-btn" *ngIf="cleanProduct!=='오피스텔'">
+              <img src="/assets/img/etc/b-btn.png" class="option-btn" *ngIf="cleanProduct==='오피스텔'">
+            </div>
+            오피스텔
+          </div>
+          <div class="option-button-body" (click)="selectProduct('다세대')"
+               [ngClass]="{'option-product':cleanProduct==='다세대'}">
+            <div class="option-btn-icon">
+              <img src="/assets/img/etc/a-btn.png" class="option-btn" *ngIf="cleanProduct!=='다세대'">
+              <img src="/assets/img/etc/b-btn.png" class="option-btn" *ngIf="cleanProduct==='다세대'">
+            </div>
+            다세대
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box"
+         [ngClass]="{'close-box':!cleanProduct,'select-line':cleanProduct && (!localeValue || !localeDetailValue || !selectedValue)}">
+      <div class="cleaning-menu-box" id="localeDiv">
+        <div class="cleaning-menu-header">
+          지역/평수 선택
+        </div>
+        <div class="cleaning-menu-body">
+          원하시는 청소 지역과 평수를 선택해 주세요
+        </div>
+      </div>
+      <button class="locale-button-box" (click)="localePopupOpen(1)"
+              [ngClass]="{'locale-select' : localeValue!=null && localeDetailValue!=null && selectedValue!=null}">
+          <span *ngIf="localeValue==null || localeDetailValue==null || selectedValue==null">
+            지역/평수 선택 <img src="/assets/img/etc/path.png" class="side-path">
+          </span>
+        <span *ngIf="localeValue!=null && localeDetailValue!=null && selectedValue!=null">
+            {{localeValue.name}} - {{localeDetailValue.name}} , {{selectedValue.name}}
+          </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex-default option-flex-center">
+    <div class="cleaning-box" style="height: 481px"
+         [ngClass]="{'emphasis-border-red':selectedValue!=null && localeValue!=null && model ==null,'close-box':selectedValue==null || localeValue==null}">
+      <div class="cleaning-menu-box" id="dateDiv">
+        <div class="cleaning-menu-header">
+          청소 예정일
+        </div>
+        <div class="cleaning-menu-body">
+          청소 희망일을 달력에서 눌러 주세요
+        </div>
+      </div>
+      <input class="form-control" name="mydate" style="display: none"
+             angular-mydatepicker #dp="angular-mydatepicker" locale="ko-kr"
+             [(ngModel)]="model" [options]="myDpOptions"/>
+      <div class="choice-date" *ngIf="model==null">
+        ※원하시는 청소일을 달력에서 눌러주세요
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-default option-flex-center padding-bottom-30">
+    <div class="open-popup-header">
+      <button class="open-popup-body smt-shop" (click)="moveShopPricePage()">업체 확인하기
+      </button>
+    </div>
+  </div>
+</div>
+
+
+<div *ngIf="localePopup===true">
+  <div class="default-service-popup-main">
+    <div class="default-service-popup" style="max-width: 400px">
+      <div class="default-service-popup-header">
+        <div class="default-service-popup-header-close">
+          <img src="/assets/img/main/btn-close.png" (click)="localePopup=false">
+        </div>
+      </div>
+      <div class="default-service-popup-body">
+        <div class="default-service-popup-body-box">
+          <div class="locale-title">
+            {{titleText}}
+          </div>
+          <div class="flex-default option-flex-center" *ngIf="localeDetailView == 1">
+            <div class="flex-default option-flex-center locale-box-main">
+              <div *ngFor="let data of localeData">
+                <div class="locale-box" (click)="localeMain(data)">
+                  {{data.name}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-default option-flex-center" *ngIf="localeDetailView == 2">
+            <div class="flex-default option-flex-center locale-box-main">
+              <div *ngFor="let data of localeDetailData">
+                <div class="locale-box" (click)="localeSub(data)">
+                  {{data.name}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-default option-flex-center" *ngIf="localeDetailView == 3">
+            <div class="locale-box-main">
+              <div *ngFor="let data of countries">
+                <div class="size-box" (click)="sizeMain(data)">
+                  {{data.name}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

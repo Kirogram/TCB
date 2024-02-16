@@ -1,0 +1,62 @@
+.order-table {
+  width: 100%;
+
+  thead {
+    background: #4383c4;
+    border-bottom: 1px solid black;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+    tr {
+      border-bottom: 1px solid #ccc;
+
+      td {
+        border-left: 1px solid #ccc;
+      }
+    }
+
+    td:nth-child(4) {
+      min-width: 50px;
+    }
+  }
+
+  tbody {
+    border-bottom: 1px solid black;
+    text-align: center;
+
+    @media (max-width: 1024px) {
+      font-size: 12px;
+    }
+
+    tr {
+      border-bottom: 1px dashed #ccc;
+
+      td {
+        border-left: 1px dashed #ccc;
+      }
+
+      td:nth-child(1) {
+        border-left: 0;
+
+      }
+    }
+
+    tr:nth-child(1) td:nth-child(1) {
+      font-weight: bold;
+    }
+
+    tr:nth-child(1) td:nth-child(2) {
+      text-decoration: underline;
+      color: blue;
+    }
+  }
+}
+
+
+.shop-order-btn {
+  background: #4383c4;
+  color: white;
+  border: 0;
+  font-size: 16px;
+}

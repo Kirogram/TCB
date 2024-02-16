@@ -1,0 +1,64 @@
+.qa-bg {
+  background: #e9f1f6;
+}
+
+.main-qa-title {
+  font: normal normal bold 30px/40px 'Noto Sans KR';
+  padding-top: 80px;
+  padding-bottom: 50px;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+
+  span {
+    color: #3294ff;
+  }
+}
+
+.qa-table {
+  padding-bottom: 50px;
+}
+
+::ng-deep {
+  app-main-qa .qa-table .btn-link {
+    font: normal normal normal 14px/24px 'Noto Sans KR';
+    color: #2A2C30;
+  }
+
+  .qa-table .card-body {
+    background: #eee;
+    font: normal normal normal 14px/24px 'Noto Sans KR';
+  }
+
+  .qa-table .accordion-item {
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.09);
+  }
+
+  .qa-table .accordion-button {
+    border-radius: 10px;
+
+    > div {
+      font: normal normal bold 14px/24px 'Noto Sans KR';
+    }
+  }
+
+  .qa-table .accordion-body {
+    > div {
+      font: normal normal normal 12px/24px 'Noto Sans KR';
+      letter-spacing: -0.54px;
+    }
+  }
+
+  .qa-table .accordion-button:not(.collapsed) {
+    background: white;
+    font: normal normal bold 14px/24px 'Noto Sans KR';
+    color: #278eff;
+  }
+
+  .card-header {
+    outline: none;
+  }
+}

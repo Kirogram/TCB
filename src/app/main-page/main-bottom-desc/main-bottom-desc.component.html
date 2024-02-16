@@ -1,0 +1,88 @@
+<div class="back-img">
+  <div class="padding-20-percent flex-default ">
+    <section waIntersectionObserver waIntersectionThreshold="0.5">
+      <div class="bottom-text-box" (waIntersectionObservee)="onIntersection2($event)"
+           [ngClass]="{'bottom-desc-animation':changeCss2==true}">
+        <div class="flex-default">
+          <div>
+            <div class="main-1-title">
+              나에게 맞는<br>청소업체 추천,<br> 더클린박스여서 가능합니다
+            </div>
+            <div class="main-1-body">
+              빅데이터를 통한 청소관련 이슈 분석 및 정리 매일 갱신되는 청소 업체 지수 데이터를 바탕으로한 랭킹 시스템
+              이모든건 오직 고객님들을 위한 더클린박스의 정성입니다
+            </div>
+          </div>
+          <div class="main-2-img-box">
+            <img src="/assets/img/main/percent.png">
+          </div>
+        </div>
+        <div class="flex-default option-flex-center-only-mobile">
+          <div class="main-2-box">
+            <div class="main-2-title">
+              더클린박스의 인증업체 추천시스템
+            </div>
+            <div class="main-2-body">
+              묻지마 업체에 속지 않도록 더클린박스 인증을 통한 믿을 수 있는 업체들을 구성하여 높은 품질의 서비스를 제공받으실 수 있도록 업체품질을 관리하고 있습니다
+            </div>
+          </div>
+          <div class="main-2-box">
+            <div class="main-2-title">
+              더클린박스는 정답을 알고 있습니다
+            </div>
+            <div class="main-2-body">
+              고객이 원하는걸 해줄 수 있는 업체, 정성을 다해줄 업체를 찾고 있으시다면 더클린박스 인증업체가 정답입니다
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="main-4-box">
+  <div class="main-4-box-main">
+    <div class="main-4-desc">
+      <section waIntersectionObserver waIntersectionThreshold="0">
+        <div class="main-4-title" (waIntersectionObservee)="onIntersection($event)"
+             [ngClass]="{'text-point':changeCss==true}">
+          <span>청소</span>
+          <span>에서</span>
+          <span> 가장</span>
+          <span> 중요</span>
+          <span>한건</span>
+          <span> '정성'</span>
+          <span>입니다</span>
+        </div>
+      </section>
+      <div class="main-4-body-pc">
+        정성 가득한 청소 서비스와 전문가들의 수준높은 시공<br>
+        검증된 청소업체들로만 구성된 믿을수 있는 더클린박스
+      </div>
+      <div class="main-4-body-mobile">
+        정성 가득한 청소 서비스와 전문가들의 수준높은 시공 검증된 청소업체들로만 구성된 믿을수 있는 더클린박스
+      </div>
+    </div>
+    <div class="img-box">
+      <img src="/assets/img/main/bottom-tcb.png">
+    </div>
+  </div>
+</div>
+
+
+<div class="padding-20-percent">
+  <div class="bottom-item-main">
+    <div class="bottom-title">
+      더클린박스가 드리는<br>
+      <span>네가지 약속</span>
+    </div>
+    <div class="flex-nowrap option-flex-center-only-pc">
+      <div *ngFor="let data of data" class="bottom-card-box">
+        <div class="card-number">{{data.number}}</div>
+        <div [innerHTML]="data.title" class="card-title"></div>
+        <div [innerHTML]="data.desc" class="card-desc"></div>
+        <img [src]="data.img">
+      </div>
+    </div>
+  </div>
+</div>

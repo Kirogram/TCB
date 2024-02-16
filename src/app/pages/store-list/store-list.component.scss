@@ -1,0 +1,561 @@
+.shop-price-title {
+  font: normal normal bold 18px/24px 'Noto Sans KR';
+}
+
+.shop-price-sub-title {
+  font: normal normal normal 12px/24px 'Noto Sans KR';
+  padding-bottom: 10px;
+  color: #707A89;
+}
+
+.shop-locale-box {
+  width: 150px;
+  text-align: center;
+  padding: 10px 0;
+  outline: none;
+  border: 1px solid #4383c4;
+  border-radius: 5px;
+  color: #007bff;
+}
+
+.shop-item-box {
+  width: 120px;
+  text-align: center;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #4383c4;
+  border-radius: 5px;
+  color: #007bff;
+}
+
+.shop-filter-box {
+  padding: 10px 5px;
+  width: 50px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #4383c4;
+
+}
+
+.shop-title-header {
+  padding-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.shop-main {
+  width: 100%;
+  display: flex;
+
+  .shop-box {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+
+    .shop-desc {
+      padding: 0 10px;
+      width: 60%;
+
+      .shop-name {
+        font-size: 18px;
+        font-weight: bold;
+        color: #4383c4;
+        line-height: 36px;
+      }
+
+      .shop-point {
+        padding-left: 10px;
+        line-height: 36px;
+
+        .shop-star {
+          color: gold;
+        }
+
+        .shop-score {
+          font-weight: bold;
+          color: #58595b;
+        }
+      }
+    }
+
+    .shop-tag-box {
+      white-space: nowrap;
+      overflow: hidden;
+
+      .shop-tag {
+        font-size: 12px;
+        font-weight: bold;
+        color: #58595b;
+      }
+    }
+
+    .shop-desc-body {
+      font-size: 12px;
+      color: #494949;
+      max-height: 80px;
+      padding-top: 10px;
+      white-space: pre-wrap;
+      overflow: hidden;
+    }
+  }
+
+  .shop-logo-box {
+    width: 40%;
+    max-width: 200px;
+
+    .shop-logo {
+      width: 100%;
+      height: 120px;
+      padding: 10px;
+    }
+  }
+}
+
+.pot-main-box {
+  padding: 20px 0 0 0;
+  position: relative;
+
+  .pot-title {
+    position: absolute;
+    background: #4383c4;
+    color: white;
+    padding: 2px 10px;
+    top: 5px;
+    left: 10px;
+    z-index: 1;
+    font-size: 14px;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+  .pot-main {
+    background: #f7f7f7;
+    display: flex;
+    overflow: auto;
+    padding: 5px 10px;
+
+    .pot-box {
+      width: 25%;
+      height: 100px;
+      padding: 10px;
+      min-width: 180px;
+      position: relative;
+
+      > img {
+        width: 100%;
+        height: 100%;
+      }
+
+      > div {
+        background: gray;
+        color: white;
+        font-size: 12px;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        padding: 0 5px;
+      }
+    }
+  }
+}
+
+.badge-main {
+  padding: 10px;
+
+  > div {
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  > img {
+    width: 45px;
+  }
+}
+
+//--------------------------------------------------------------------------------------
+
+.select-brand-main {
+  width: 100%;
+  background: white;
+
+  @media (min-width: 1025px) {
+    margin-top: 30px;
+  }
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+  }
+  position: relative;
+
+  .select-brand-border {
+    position: relative;
+
+    @media (min-width: 1025px) {
+      padding: 20px;
+      border: 1px solid #DCE2E9;
+    }
+    @media (max-width: 1024px) {
+      padding: 20px 0 10px 0;
+      border-top: 1px solid #DCE2E9;
+      border-bottom: 1px solid #DCE2E9;
+    }
+  }
+
+  .premium-shadow {
+
+    @media (min-width: 1025px) {
+      padding: 20px;
+    }
+    @media (max-width: 1024px) {
+      padding: 20px 0 10px 0;
+    }
+  }
+
+  .un-visible-hide {
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+
+    .un-visible-text {
+      font-size: 24px;
+      color: #4383C4;
+    }
+  }
+
+  .select-brand-box {
+    display: flex;
+  }
+
+  .select-brand-logo {
+    @media (min-width: 1025px) {
+      width: 200px;
+      height: 120px;
+    }
+  }
+
+  .select-brand-logo-mobile {
+
+    @media (min-width: 1025px) {
+      display: none;
+    }
+    @media (max-width: 1024px) {
+      width: 150px;
+      max-height: 90px;
+    }
+  }
+
+  .select-brand-header {
+    cursor: pointer;
+    overflow: hidden;
+  }
+}
+
+.flex-only-pc {
+  @media (min-width: 1025px) {
+    display: flex;
+  }
+  @media (max-width: 1024px) {
+    padding-left: 10px;
+    max-width: 170px;
+  }
+}
+
+.flex-only-mobile {
+  @media (max-width: 1024px) {
+    display: flex;
+  }
+}
+
+.main-body {
+  position: relative;
+  margin-right: 20px;
+}
+
+.sub-body {
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+}
+
+.logo-img-box {
+  position: relative;
+}
+
+.shop-info-btn-box {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.shop-info-btn {
+  border: 1px solid #4383c4;
+  background: white;
+  border-radius: 6px;
+  color: #4383c4;
+  font: normal normal normal 14px/20px 'Noto Sans KR';
+  padding: 10px 20px;
+}
+
+.pc-hide {
+  @media (min-width: 1025px) {
+    display: none;
+  }
+  @media (max-width: 1024px) {
+  }
+}
+
+.price-event-title {
+  @media (min-width: 1025px) {
+    margin-top: 20px;
+  }
+  @media (max-width: 1024px) {
+  }
+  color: white;
+  background: #4383C4;
+  width: 50px;
+  text-align: center;
+  font: normal normal normal 10px/20px 'Noto Sans KR';
+  border-radius: 6px;
+}
+
+.price-event-body {
+  font: normal normal normal 14px/28px 'Noto Sans KR';
+  color: #4383c4;
+  width: 200px;
+  font-size: 12px;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 0 10px;
+  text-overflow: ellipsis;
+}
+
+.select-brand-title {
+  font: normal normal bold 20px/20px 'Noto Sans KR';
+  padding-right: 10px;
+}
+
+.select-brand-point {
+  font: normal normal bold 12px/24px 'Noto Sans KR';
+  color: #707A89;
+
+  img {
+    width: 13px;
+  }
+}
+
+.shop-detail-btn {
+  background: #4383C4;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  font: normal normal normal 12px/24px 'Noto Sans KR';
+  padding: 0 20px;
+}
+
+.tag-box {
+  overflow: hidden;
+  padding-top: 5px;
+}
+
+.tag-main {
+  padding: 0px 3px;
+  background: #FAFBFC;
+  color: #707A89;
+  font: normal normal normal 8px/24px 'Noto Sans KR';
+  margin-right: 5px;
+  white-space: nowrap;
+}
+
+.select-brand-desc {
+  padding: 10px;
+  font: normal normal normal 14px/24px 'Noto Sans KR';
+  height: 65px;
+  color: #707A89;
+  overflow: hidden;
+  width: 100%;
+}
+
+.badge-box-main {
+  overflow: hidden;
+}
+
+.badge-main {
+  background: #F3F9FF;
+  text-align: center;
+  padding: 5px 0;
+  width: 45px;
+  margin: 5px 5px 5px 0;
+
+  img {
+    width: 20px;
+    object-fit: cover;
+  }
+
+  div {
+    color: #4383C4;
+    font: normal normal normal 8px/20px 'Noto Sans KR';
+  }
+}
+
+.option-item-main {
+  font-size: 12px;
+  background: #eee;
+  border-radius: 10px;
+
+  div {
+    padding: 5px;
+  }
+
+  img {
+    width: 14px;
+    margin-right: 3px;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: 14px;
+  }
+}
+
+.pot-title {
+  background: #707A89;
+  color: white;
+  font: normal normal normal 8px/20px 'Noto Sans KR';
+  width: 60px;
+  text-align: center;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.pot-main {
+  display: flex;
+  overflow: auto;
+  padding: 5px 0;
+
+  .pot-box {
+    position: relative;
+    padding-right: 10px;
+
+    .pot-img {
+      width: 150px;
+      max-height: 80px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+
+    .pot-catg {
+      font: normal normal normal 12px/24px 'Noto Sans KR';
+      color: #707A89;
+    }
+  }
+
+}
+
+
+.select-price-main {
+  @media (min-width: 1025px) {
+    padding-top: 10px;
+  }
+  @media (max-width: 1024px) {
+    padding: 10px 0;
+  }
+
+  .price-text-main {
+    text-align: right;
+  }
+
+  .select-price-header {
+    font: normal normal bold 18px/18px 'Noto Sans KR';
+  }
+
+  .select-price-sale-price {
+    font: normal normal bold 24px/24px 'Noto Sans KR';
+    color: #FF8E2C;
+    padding: 0 10px;
+  }
+
+  .select-price-default-price {
+    text-decoration: line-through;
+    color: #AFBCCE;
+    font: normal normal normal 12px/12px 'Noto Sans KR';
+  }
+}
+
+.select-brand-order {
+  text-align: center;
+
+  @media (min-width: 1025px) {
+    padding-top: 10px;
+  }
+  @media (max-width: 1024px) {
+    padding: 10px 0;
+  }
+
+  .select-brand-order-btn {
+    background: white;
+    border: 1px solid red;
+    border-radius: 6px;
+    color: red;
+    padding: 10px 20px;
+    font: normal normal bold 24px/24px 'Noto Sans KR';
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.55);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.55);
+    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.55);
+  }
+}
+
+.mobile-hide {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.shop-review {
+  font-size: 12px;
+  padding-top: 10px;
+  position: relative;
+  height: 30px;
+
+  div {
+    position: absolute;
+    @media (min-width: 1025px) {
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    @media (max-width: 1024px) {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  }
+
+  .review-item {
+    text-decoration: underline;
+    color: #707A89;
+    padding-left: 5px;
+  }
+
+  .text-icon {
+    width: 25px;
+  }
+}
+
+.coupon-item {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(to left, #9c7521, #ffdf73);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 6px;
+  z-index: 1;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+}

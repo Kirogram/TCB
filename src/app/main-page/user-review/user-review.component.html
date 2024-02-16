@@ -1,0 +1,35 @@
+<div class="padding-20-percent bg-blue">
+  <div class="review-title">
+    더클린박스 고객님들의<br>
+    리얼 후기
+  </div>
+  <div class="review-main">
+    <ngb-carousel [interval]="10000" [showNavigationArrows]="false">
+      <ng-template ngbSlide *ngFor="let reviewData of reviewData">
+        <div class="flex-nowrap option-flex-center-only-pc" style="padding-bottom: 50px">
+          <div *ngFor="let data of reviewData" class="review-box-main">
+            <section waIntersectionObserver waIntersectionThreshold="0">
+              <div (waIntersectionObservee)="onIntersection($event)">
+                <div class="review-desc-box">
+                  <div class="flex-default">
+                    <div class="review-service-name" [ngClass]="{'review-open':changeCss==true}">
+                      {{data.SERVICE_NAME}}
+                    </div>
+                  </div>
+                  <div class="review-locale" [ngClass]="{'review-open':changeCss==true}">
+                    {{data.LOCALE_NAME}}
+                  </div>
+                  <div class="review-text" [ngClass]="{'review-open':changeCss==true}">{{data.TEXT}}</div>
+                  <div class="review-shop-box" [ngClass]="{'review-open':changeCss==true}">
+                    <img [src]="data.SHOP_LOGO">
+                    <span>{{data.SHOP_NAME}}</span>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>

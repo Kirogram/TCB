@@ -1,0 +1,8 @@
+<!--<app-ad-header></app-ad-header>-->
+<app-full-menu></app-full-menu>
+<div (window:resize)="onResize()" [ngStyle]="{'height':windowHeight+'px'}" style="overflow: auto;overflow-x: hidden;" class="main-panel" id="mainPanel">
+  <router-outlet></router-outlet>
+  <app-bottom-desc></app-bottom-desc>
+</div>
+
+<app-toast aria-live="polite" aria-atomic="true"></app-toast>

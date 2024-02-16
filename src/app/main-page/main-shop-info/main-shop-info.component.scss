@@ -1,0 +1,183 @@
+.main-shop-title {
+  font: normal normal bold 30px/40px 'Noto Sans KR';
+  padding-bottom: 50px;
+  padding-top: 80px;
+  letter-spacing: -1px;
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+
+  span {
+    color: #3294ff;
+  }
+}
+
+.star-set {
+  max-width: 100px;
+}
+
+.main-shop-padding {
+  padding-bottom: 80px;
+}
+
+.main-shop-box {
+  width: 350px;
+  min-width: 350px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.shop-header-img {
+  text-align: center;
+  position: relative;
+  padding-bottom: 20px;
+
+  .shop-header-logo {
+    width: 200px;
+    max-height: 120px;
+  }
+}
+
+.shop-desc-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+
+  .shop-title {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+
+  .star {
+    position: relative;
+    display: inline-block;
+    color: #d3d3d3;
+
+    img {
+      width: 14px;
+    }
+
+    .half {
+      position: absolute;
+      display: inline-block;
+      overflow: hidden;
+      left: 0;
+      top: -1px;
+    }
+  }
+
+  .shop-point {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+    padding: 5px;
+    line-height: 24px;
+  }
+
+  .order-count {
+    font-size: 14px;
+    color: #888;
+    padding: 5px 0;
+    line-height: 24px;
+  }
+
+  .shop-address {
+    font-size: 14px;
+    color: #888;
+    padding: 5px;
+    line-height: 24px;
+  }
+
+  .tag-box {
+    padding: 10px 0;
+    overflow: hidden;
+
+    .tag-main {
+      padding: 6px 9px;
+      background: #eff5fd;
+      color: #52a4ff;
+      font: normal normal normal 12px/12px 'Noto Sans KR';
+      margin-right: 5px;
+      white-space: nowrap;
+      border-radius: 3px;
+    }
+  }
+
+
+  .shop-desc-text {
+    padding: 10px 0;
+    font-size: 13px;
+    color: #696969;
+    letter-spacing: -0.4px;
+    height: 70px;
+    overflow: hidden;
+
+    span {
+      white-space: pre-wrap;
+    }
+  }
+}
+
+.under-line {
+  border-bottom: 1px solid #ececec;
+}
+
+
+.badge-box-main {
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.badge-main {
+  background: #f9faf9;
+  border: 1px solid #eff2ef;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px 0;
+  width: 54px;
+  height: 64px;
+  margin-right: 5px;
+
+  img {
+    width: 22px;
+    object-fit: cover;
+  }
+
+  div {
+    color: #505050;
+    font: normal normal normal 10px/26px 'Noto Sans KR';
+  }
+}
+
+.shop-event-box {
+  width: 290px;
+  background: #eff5fd;
+  border-radius: 8px;
+  padding: 8px;
+
+  .shop-event-title {
+    background: #52a4ff;
+    width: 44px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    font: normal normal normal 10px/20px 'Noto Sans KR';
+    margin-right: 10px;
+  }
+
+  .shop-event-desc {
+    color: #52a4ff;
+    font: normal normal normal 12px/20px 'Noto Sans KR';
+  }
+}
+
+::ng-deep {
+  .main-shop-box .visually-hidden {
+    display: none;
+  }
+}

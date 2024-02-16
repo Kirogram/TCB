@@ -1,0 +1,93 @@
+.pot-bg {
+  background: #e9f1f6;
+}
+
+.after-box-main {
+  padding-bottom: 80px;
+}
+
+.pot-title {
+  padding-top: 80px;
+  font: normal normal bold 30px/40px 'Noto Sans KR';
+  padding-bottom: 50px;
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+
+  span {
+    color: #3294ff;
+  }
+}
+
+.after-main {
+  margin: 10px;
+  background: white;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+
+  @media (min-width: 1025px) {
+    width: calc(25% - 20px);
+  }
+
+  @media (max-width: 1024px) {
+    width: calc(50% - 20px);
+  }
+}
+
+.after-img {
+  object-fit: cover;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+
+  @media (min-width: 1025px) {
+    max-height: 130px;
+  }
+  @media (max-width: 1024px) {
+    max-height: 80px;
+  }
+}
+
+.after-desc-box {
+  padding: 10px;
+}
+
+.after-main-box {
+  width: 60px;
+  text-align: center;
+  background: #4383C4;
+  color: white;
+  border-radius: 6px;
+  font: normal normal normal 8px/20px 'Noto Sans KR';
+  margin-bottom: 5px;
+}
+
+.after-shop {
+  font: normal normal bold 14px/24px 'Noto Sans KR';
+}
+
+.after-sub-text {
+  color: #696969;
+  font: normal normal normal 10px/20px 'Noto Sans KR';
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.editor-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.editor-title {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 20px 10px;
+
+}

@@ -1,0 +1,358 @@
+.back-img {
+  @media (min-width: 1025px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://cleanbox.shop/fileDownLoad/notice/1651001503247bottom-bg.jpg');
+  }
+
+  @media (max-width: 1024px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.6)), url('https://cleanbox.shop/fileDownLoad/notice/1651001505664bottom-bg-mobile.jpg');
+  }
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.bottom-text-box {
+  opacity: 0;
+  text-align: left;
+  @media (min-width: 1025px) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 50px 10px;
+  }
+}
+
+.main-1-title {
+  color: white;
+  font: normal normal bold 24px/30px 'Noto Sans KR';
+  padding-bottom: 20px;
+}
+
+.main-1-body {
+  color: #e1e1e1;
+  font: normal normal normal 12px/24px 'Noto Sans KR';
+  max-width: 560px;
+  padding-bottom: 30px;
+  letter-spacing: -0.37px;
+  font-family: Pretendard;
+}
+
+.mobile-no-flex {
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+}
+
+.main-2-img-box {
+  text-align: center;
+  @media (min-width: 1025px) {
+    width: 400px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    text-align: center;
+  }
+
+  img {
+    object-fit: cover;
+    width: 170px;
+  }
+}
+
+.main-2-box {
+  width: 320px;
+  height: 150px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 30px 10px 10px 10px;
+  text-align: center;
+}
+
+.main-2-title {
+  color: #3294ff;
+  font: normal normal bold 18px/24px 'Noto Sans KR';
+  padding-bottom: 10px;
+}
+
+
+.main-2-body {
+  color: white;
+  font: normal normal normal 12px/24px 'Noto Sans KR';
+}
+
+.main-3-box {
+}
+
+.main-3-title {
+  color: white;
+  font: normal normal bold 18px/24px 'Noto Sans KR';
+}
+
+.main-3-body {
+  color: white;
+  font: normal normal normal 12px/24px 'Noto Sans KR';
+}
+
+.main-4-box {
+  padding-bottom: 80px;
+}
+
+.main-4-box-main {
+  background: #F3F9FF;
+  border-radius: 6px;
+  position: relative;
+
+  .main-4-desc {
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+
+    .main-4-title {
+      color: #4383C4;
+      font: normal normal bold 20px/40px 'Noto Sans KR';
+    }
+
+    .main-4-body-pc {
+      color: #2A2C30;
+      font: normal normal normal 12px/20px 'Noto Sans KR';
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+
+    .main-4-body-mobile {
+      color: #2A2C30;
+      font: normal normal normal 12px/20px 'Noto Sans KR';
+      padding: 0 10px;
+
+      @media (min-width: 1025px) {
+        display: none;
+      }
+    }
+  }
+
+  .img-box {
+
+    @media (min-width: 1025px) {
+      position: absolute;
+      bottom: 0;
+      right: 100px;
+    }
+
+    @media (max-width: 1024px) {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      opacity: 0.2;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.bottom-item-main {
+  padding-bottom: 80px;
+}
+
+.bottom-title {
+  font: normal normal bold 30px/40px 'Noto Sans KR';
+  padding-bottom: 50px;
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+
+  span {
+    color: #3294ff;
+  }
+}
+
+//------------------------------------------------------------
+
+.text-point span {
+  color: #4383C4;
+  animation: blur 3s ease-out infinite;
+  -webkit-animation: blur 3s ease-out infinite;
+}
+
+.text-point span:nth-child(1) {
+  animation-delay: 0.1s;
+  -webkit-animation-delay: 0.1s;
+}
+
+.text-point span:nth-child(2) {
+  animation-delay: 0.2s;
+  -webkit-animation-delay: 0.2s;
+}
+
+.text-point span:nth-child(3) {
+  animation-delay: 0.3s;
+  -webkit-animation-delay: 0.3s;
+}
+
+.text-point span:nth-child(4) {
+  animation-delay: 0.4s;
+  -webkit-animation-delay: 0.4s;
+}
+
+.text-point span:nth-child(5) {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+}
+
+.text-point span:nth-child(6) {
+  animation-delay: 0.6s;
+  -webkit-animation-delay: 0.6s;
+}
+
+.text-point span:nth-child(7) {
+  animation-delay: 0.7s;
+  -webkit-animation-delay: 0.7s;
+}
+
+@keyframes blur {
+  0% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+  5% {
+    text-shadow: 0 0 90px #fff;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 0px #fff;
+  }
+  80% {
+    text-shadow: 0 0 0px #fff;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    text-shadow: 0 0 90px #fff;
+  }
+  100% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes blur {
+  0% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+  5% {
+    text-shadow: 0 0 90px #fff;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 0px #fff;
+  }
+  80% {
+    text-shadow: 0 0 0px #fff;
+  }
+  85% {
+    opacity: 1;
+  }
+  95% {
+    text-shadow: 0 0 90px #fff;
+  }
+  100% {
+    text-shadow: 0 0 100px #fff;
+    opacity: 0;
+  }
+}
+
+.bottom-desc-animation {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-name: bottom-desc-animation;
+  animation-fill-mode: forwards;
+}
+
+@keyframes bottom-desc-animation {
+  0% {
+    position: relative;
+    left: -20px;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes bottom-desc-animation {
+  0% {
+    position: relative;
+    left: -20px;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+//------------------------------------------------------------
+
+.bottom-card-box {
+  position: relative;
+  min-width: 230px;
+  width: 230px;
+  height: 380px;
+  margin: 10px;
+  box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.09);
+  border-radius: 10px;
+
+  .card-number {
+    width: 36px;
+    height: 32px;
+    font: normal normal bold 16px/32px 'Noto Sans KR';
+    background: #3294ff;
+    text-align: center;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .card-title {
+    padding: 20px;
+    font: normal normal bold 20px/28px 'Noto Sans KR';
+    color: #278eff;
+  }
+
+  .card-desc {
+    font: normal normal normal 12px/18px 'Noto Sans KR';
+    color: #1a1a1a;
+    letter-spacing: -0.54px;
+    padding: 0 20px;
+  }
+
+  img {
+    position: absolute;
+    width: 230px;
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}

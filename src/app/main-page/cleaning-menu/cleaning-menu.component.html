@@ -1,0 +1,54 @@
+<div class="padding-20-percent">
+  <div class="cleaning-padding">
+    <section waIntersectionObserver waIntersectionThreshold="0">
+      <div class="flex-default">
+        <div class="cleaning-flex">
+          <div class="cleaning-menu-title" (waIntersectionObservee)="onIntersection($event)">
+            입주청소 비용이<br>궁금하신가요?
+          </div>
+          <div class="cleaning-menu-title-2">
+            상세정보까지 바로 확인해보세요
+          </div>
+          <div class="cleaning-menu-sub-title">
+            내 조건에 딱 맞는 업체 정보와 비용 후기<br>
+            포트폴리오까지 가입없이 한번에 확인해보세요
+          </div>
+          <div class="cleaning-menu-button-main" [ngClass]="{'content-view':changeCss==true}">
+            <button class="cleaning-button smt-search" routerLink="/homeCleaning">청소업체 정보 바로 확인하기</button>
+          </div>
+        </div>
+        <div class="cleaning-flex">
+          <div class="cleaning-menu-title">
+            입주·이사청소가<br>아니신가요?
+          </div>
+          <div class="cleaning-menu-sub-title">
+            전문 청소 서비스는 더클린박스에서 해결하세요
+          </div>
+          <div class="other-cleaning-menu-main">
+            <div class="flex-default option-flex-center-only-mobile">
+              <div class="submenu-box" routerLink="/buildingCleaning">
+                <img src="/assets/img/icon/fill-20@3x.png">
+                <div class="sub-menu-title">사업장 청소</div>
+                <div class="sub-menu-body">식당·사무실 등</div>
+              </div>
+              <!--          <div class="submenu-box" routerLink="/productCleaning">-->
+              <!--            <img src="/assets/img/main/product-icon.png">-->
+              <!--            <div class="sub-menu-title">제품 청소</div>-->
+              <!--            <div class="sub-menu-body">에어컨·세탁기 등</div>-->
+              <!--          </div>-->
+              <div class="submenu-box" routerLink="/normalCleaning">
+                <img src="/assets/img/icon/star@3x.png">
+                <div class="sub-menu-title">특수 청소</div>
+                <div class="sub-menu-body">폐기·수해·화재 등</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<div class="other-bottom-button" [ngClass]="{'other-button-visible' : otherShow == true}">
+  <button class="other-bottom-button-item  smt-search" routerLink="/homeCleaning">청소업체 정보 바로 확인하기</button>
+</div>

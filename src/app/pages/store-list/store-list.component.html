@@ -1,0 +1,152 @@
+<div class="body">
+  <div class="shop-price-title padding-top-20">
+    업체 리스트
+  </div>
+  <div class="shop-price-sub-title">
+    상담 가능 업체 리스트
+  </div>
+  <div class="flex-default">
+    <div style="padding: 10px 0">
+      <select [(ngModel)]="localeValue" class="shop-locale-box" (ngModelChange)="locale()">
+        <option [ngValue]="null" selected>청소가능지역</option>
+        <option *ngFor="let d of localeData" [ngValue]="d">{{d}}</option>
+      </select>
+    </div>
+<!--    <div style="padding: 10px">-->
+<!--      <select [(ngModel)]="cleaningSelect" class="shop-item-box" style="width: 150px" (ngModelChange)="locale()">-->
+<!--        <option [ngValue]="null" selected>청소종류</option>-->
+<!--        <option *ngFor="let cleaningData of cleaningData" [ngValue]="cleaningData">{{cleaningData}}</option>-->
+<!--      </select>-->
+<!--    </div>-->
+  </div>
+  <div class="shop-title-header option-flex-center">
+    프리미엄 업체
+  </div>
+  <div>
+    <div *ngFor="let data of primiumShop;" class="select-brand-main">
+      <div class="select-brand-border">
+        <div *ngIf="data.COUPON_VISIBLE=='Y'" class="coupon-item">
+          쿠폰
+        </div>
+        <div class="flex-nowrap">
+          <div class="main-body mobile-hide">
+            <div (click)="detailShop(data)" class="logo-img-box">
+              <img [src]="data.SHOP_LOGO" class="select-brand-logo">
+            </div>
+            <div class="shop-info-btn-box">
+              <button class="shop-info-btn" (click)="detailShop(data)">업체 상세정보 보기</button>
+            </div>
+            <div *ngIf="data.SHOP_EVENT">
+              <div class="price-event-title">EVENT</div>
+              <div class="price-event-body">{{data.SHOP_EVENT}}</div>
+            </div>
+          </div>
+          <div class="sub-body">
+            <div class="flex-nowrap">
+              <div (click)="detailShop(data)" class="logo-img-box">
+                <img [src]="data.SHOP_LOGO" class="select-brand-logo-mobile">
+              </div>
+              <div class="flex-only-pc">
+                <div class="select-brand-title">
+                  {{data.SHOP_NAME}}
+                </div>
+                <div class="select-brand-point">
+                  <img src="/assets/img/medal/star.png">
+                  <span>{{data.SHOP_POINT}}</span> · {{data.ORDER_COUNT}}
+                </div>
+                <div class="pc-hide">
+                  <button class="shop-detail-btn" (click)="detailShop(data)">업체 상세정보 보기</button>
+                </div>
+              </div>
+            </div>
+            <div class="tag-box flex-nowrap">
+              <div class="tag-main" *ngFor="let data of data.SHOP_TAG">{{data}}</div>
+            </div>
+            <div class="select-brand-desc">
+              <div [innerText]="data.SHOP_SHORT_DESC"></div>
+            </div>
+            <div class="flex-default option-item-main">
+              <div *ngIf="data.OPTION_AS">
+                <img src="/assets/img/option/check.png">
+                A/S기간 <span>{{data.OPTION_AS}}</span>
+              </div>
+              <div *ngIf="data.OPTION_AGE">
+                <img src="/assets/img/option/check.png">
+                경력
+                <span>{{data.OPTION_AGE}}</span>
+              </div>
+              <div *ngIf="data.OPTION_RECEIPT">
+                <img src="/assets/img/option/check.png">
+                현금영수증
+                <span>{{data.OPTION_RECEIPT}}</span>
+              </div>
+              <div *ngIf="data.OPTION_CARD">
+                <img src="/assets/img/option/check.png">
+                카드결제
+                <span>{{data.OPTION_CARD}}</span>
+              </div>
+              <div *ngIf="data.OPTION_TEAM">
+                <img src="/assets/img/option/check.png">
+                보유팀
+                <span>{{data.OPTION_TEAM}}</span>
+              </div>
+              <div *ngIf="data.OPTION_TIME">
+                <img src="/assets/img/option/check.png">
+                상담
+                <span>{{data.OPTION_TIME}}</span>
+              </div>
+            </div>
+            <div class="shop-review" *ngIf="data.TEXT">
+              <div>
+                <img src="/assets/img/main/text.png" class="text-icon"> <span class="review-item">{{data.TEXT}}</span>
+              </div>
+            </div>
+            <div *ngIf="data.POT_DATA.length>0">
+              <div class="pot-title">포트폴리오</div>
+              <div class="pot-main flex-nowrap">
+                <div *ngFor="let potData of data.POT_DATA" class="pot-box" (click)="detailShop(data)">
+                  <img [src]="potData.img" class="pot-img">
+                  <div class="pot-catg">{{potData.title}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop-title-header option-flex-center">
+    <div>일반업체</div>
+  </div>
+  <div class="search-results"
+       infiniteScroll
+       [infiniteScrollContainer]="'.main-panel'"
+       [infiniteScrollDistance]="2"
+       [infiniteScrollThrottle]="50"
+       [fromRoot]="true"
+       (scrolled)="onScroll()">
+    <div *ngFor="let data of shopList" class="shop-main option-flex-center">
+      <div class="shop-box" (click)="detailShop(data)">
+        <div class="flex-default">
+          <div class="shop-logo-box">
+            <img [src]="data.SHOP_LOGO" class="shop-logo">
+          </div>
+          <div class="shop-desc">
+            <div class="flex-default">
+              <div class="shop-name">{{data.SHOP_NAME}}</div>
+              <div class="shop-point">
+                <span class="shop-star">★</span>
+                <span class="shop-score"> {{data.SHOP_POINT}}</span>
+              </div>
+            </div>
+            <div class="shop-tag-box">
+              <span class="shop-tag">{{data.SHOP_TAG}}</span>
+            </div>
+            <div class="shop-desc-body" [innerHTML]="data.SHOP_SHORT_DESC"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

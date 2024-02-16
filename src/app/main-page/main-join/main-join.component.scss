@@ -1,0 +1,33 @@
+.partner-box {
+  border-radius: 6px;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+.join-bg {
+  background: #e9f1f6;
+}
+
+.shop-join-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://cleanbox.shop/fileDownLoad/notice/1651001612113shop-join.jpg');
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  border-radius: 10px;
+}
+
+.partner-text {
+  text-align: center;
+  color: white;
+
+  @media (min-width: 1025px) {
+    font: normal normal bold 24px/36px 'Noto Sans KR';
+    padding: 40px 0;
+  }
+
+  @media (max-width: 1024px) {
+    font: normal normal bold 15px/28px 'Noto Sans KR';
+    padding: 30px 0;
+  }
+}

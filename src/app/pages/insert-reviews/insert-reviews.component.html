@@ -1,0 +1,29 @@
+<div class="privacy-scroll">
+  <div class="reviews-sub-title">
+    서비스 평가
+  </div>
+  <div class="review-title">
+    서비스는 만족스러우셨나요?
+  </div>
+  <div class="review-point">
+    <ng-template #t let-fill="fill">
+          <span class="star" [class.full]="fill === 100"><img src="/assets/img/icon/star1.png" alt="">
+          <span class="half" [style.width.%]="fill"><img src="/assets/img/icon/star2.png" alt=""></span>
+          </span>
+    </ng-template>
+    <ngb-rating [(rate)]="params.SER_SCORE" [starTemplate]="t" [max]="5"></ngb-rating>
+  </div>
+  <div class="reviews-text-sub-title">
+    후기 작성
+  </div>
+  <div class="reviews-text-title">
+    더클린박스는 클린리뷰 서비스를 진행하고 있습니다.<br>
+    업체를 일방적으로 비방하는 내용은 블라인드 될 수 있습니다.
+  </div>
+  <div class="review-text">
+    <textarea rows="5" [(ngModel)]="params.TEXT" placeholder="리뷰를 작성해 주세요"></textarea>
+  </div>
+  <div class="reviews-button">
+    <button class="" (click)="insertReview()">후기 등록하기</button>
+  </div>
+</div>

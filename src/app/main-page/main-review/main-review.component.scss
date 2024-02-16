@@ -1,0 +1,93 @@
+.main-review {
+  position: relative;
+}
+
+.review-event-background {
+  width: 100%;
+  height: 150px;
+  background: #FFEFE1;
+  border-radius: 6px;
+}
+
+.main-review-box {
+  padding: 50px 0;
+}
+
+.review-event-box {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.review-event-desc {
+
+  @media (min-width: 1025px) {
+    width: 30%;
+    min-width: 280px;
+    padding-left: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  .review-event-header {
+    padding-top: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: #123884;
+  }
+
+  .review-event-text {
+
+    @media (min-width: 1024px) {
+      font: normal normal normal 14px/24px 'Noto Sans KR';
+    }
+    @media (max-width: 1023px) {
+      font: normal normal normal 12px/24px 'Noto Sans KR';
+    }
+    color: #2A2C30;
+    padding: 10px 0;
+  }
+}
+
+.review-event-img {
+
+  @media (min-width: 1025px) {
+    width: 60%;
+    text-align: center;
+  }
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+
+  .review-event-img-item {
+    width: 60%;
+    padding: 20px;
+  }
+}
+
+.review-event-btn-box {
+
+  @media (min-width: 1024px) {
+    padding-right: 40px;
+  }
+  @media (max-width: 1023px) {
+    padding-right: 10px;
+  }
+
+  .review-event-button {
+    position: relative;
+    top: 55px;
+    border: 1px solid #123884;
+    color: white;
+    background: #123884;
+    padding: 10px 10px;
+    font: normal normal normal 12px/20px 'Noto Sans KR';
+    border-radius: 16px;
+    width: 100px;
+  }
+}
+

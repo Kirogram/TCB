@@ -1,0 +1,120 @@
+.bg-blue {
+  background: #3294ff;
+}
+
+.review-main {
+  padding-bottom: 80px;
+}
+
+.review-title {
+  padding-top: 80px;
+  color: white;
+  font: normal normal bold 30px/40px 'Noto Sans KR';
+
+  @media (min-width: 1024px) {
+    padding: 50px 0;
+  }
+  @media (max-width: 1023px) {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+}
+
+.review-box-main {
+  width: 450px;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.review-service-name {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70px;
+  padding: 10px 5px;
+  font: normal normal bold 12px/20px 'Noto Sans KR';
+  background: #ffd400;
+  color: #004a9b;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.review-desc-box {
+  position: relative;
+  background: #2981e2;
+  height: 220px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.review-desc-star {
+  img {
+    width: 19px;
+    padding: 0 1px;
+  }
+}
+
+.review-locale {
+  color: white;
+  font: normal normal bold 14px/24px 'Noto Sans KR';
+  padding: 5px 0;
+}
+
+.review-text {
+  height: 80px;
+  overflow: hidden;
+  color: white;
+  font-size: 12px;
+  letter-spacing: -0.58px;
+  line-height: 1.64;
+  font-family: Pretendard;
+}
+
+.review-shop-box {
+  padding-top: 20px;
+
+  img {
+    width: 50px;
+    height: 30px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 0;
+    margin-right: 10px;
+  }
+
+  span {
+    font: normal normal normal 12px/24px 'Noto Sans KR';
+    color: white;
+  }
+}
+
+.review-open {
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-name: review-open;
+  animation-fill-mode: forwards;
+}
+
+@keyframes review-open {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes review-open {
+  0% {
+    position: relative;
+    top: -20px;
+    opacity: 0;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

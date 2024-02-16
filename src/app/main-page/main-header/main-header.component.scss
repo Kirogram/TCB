@@ -1,0 +1,166 @@
+::ng-deep {
+  .carousel {
+    outline: none;
+  }
+}
+
+.back-img {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(#212e35 0%, #284453 35%, #212e35 100%);
+  @media (min-width: 1025px) {
+    max-height: 800px;
+  }
+
+  @media (max-width: 1024px) {
+    min-height: 350px;
+  }
+}
+
+.mh-box {
+  width: 160px;
+  min-width: 160px;
+}
+
+.mh-title {
+  padding-top: 57px;
+  padding-bottom: 23px;
+  padding-left: 14px;
+  font: normal normal bold 32px/48px 'Noto Sans KR';
+  letter-spacing: -1.5px;
+  color: white;
+}
+
+.mh-sub-title {
+  padding-left: 14px;
+  letter-spacing: -0.4px;
+  color: white;
+  font: normal normal normal 16px/24px 'Noto Sans KR';
+}
+
+.mh-brand {
+  padding-left: 14px;
+  padding-bottom: 100px;
+  letter-spacing: -0.4px;
+  color: #54a6ff;
+  font: normal normal bold 16px/24px 'Noto Sans KR';
+}
+
+.mh-desc {
+  color: white;
+  opacity: 0.5;
+  font-size: 12px;
+  font-family: Pretendard;
+  padding-bottom: 16px;
+  padding-left: 14px;
+}
+
+.mh-img {
+  img {
+    @media (min-width: 1025px) {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      width: 180px;
+    }
+  }
+}
+
+.mh-img-pc {
+  img {
+    @media (min-width: 1025px) {
+      margin-top: 50px;
+      margin-left: 100px;
+      width: 350px;
+    }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+
+.mh-btn-box {
+  padding-bottom: 72px;
+  padding-left: 14px;
+}
+
+.glass-body {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 250px;
+  font: normal normal normal 18px/24px 'Noto Sans KR';
+  background: #3294ff;
+  border-radius: 8px;
+  border: 0;
+  left: 2px;
+  z-index: 1;
+
+  @media (min-width: 1025px) {
+    padding: 20px 20px;
+    top: 2px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 10px 10px;
+    top: 2px;
+  }
+}
+
+//-------------------------------------------------------------
+
+.wrapper {
+  width: 254px;
+  @media (min-width: 1025px) {
+    height: 68px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 48px;
+  }
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.main-element {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  display: block;
+  height: 98%;
+  width: 98%;
+  margin: auto;
+  align-self: center;
+  background: transparent;
+  z-index: 0;
+}
+
+.border {
+  position: relative;
+  @media (min-width: 1025px) {
+    height: 400%;
+    width: 111%;
+    top: -275%;
+    left: 2%;
+  }
+  @media (max-width: 1024px) {
+    height: 550%;
+    width: 100%;
+    top: -257%;
+    left: 2%;
+  }
+  transform: rotate(-45deg);
+  overflow: hidden;
+  background: linear-gradient(to right, transparent 20%, transparent 40%, #ffffff 50%, #ffffff 55%, transparent 70%, transparent 100%);
+  background-size: 200% auto;
+  animation: shine 2.5s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}

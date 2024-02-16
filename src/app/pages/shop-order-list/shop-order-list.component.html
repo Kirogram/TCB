@@ -1,0 +1,53 @@
+<div class="body">
+  <div>
+    <table class="order-table">
+      <thead>
+      <tr>
+        <td>고객명</td>
+        <td>고객번호</td>
+        <td>청소예정일</td>
+        <td rowspan="3">상담<br>완료</td>
+      </tr>
+      <tr>
+        <td>신청서비스</td>
+        <td>신청지역</td>
+        <td>신청가격</td>
+      </tr>
+      <tr>
+        <td>기본선택</td>
+        <td>추가옵션</td>
+        <td>신청시간</td>
+      </tr>
+      </thead>
+      <tbody *ngFor="let data of shopOrderListData">
+      <tr >
+        <td>{{data.USER_NAME}}</td>
+        <td (click)="phoneCall(data.USER_PHONE)">{{data.USER_PHONE}}</td>
+        <td>{{data.ORDER_DATE}}</td>
+        <td rowspan="3">
+          <div *ngIf="!data.ORDER_STATUS">
+            <button class="shop-order-btn" (click)="updateOrderStauts(data.ORDER_SEQ)">완료</button>
+          </div>
+          <div *ngIf="data.ORDER_STATUS!=null" style="color: red">
+            상담<br>완료
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>{{data.ORDER_TITLE}}</td>
+        <td>{{data.ORDER_LOCALE}}</td>
+        <td>
+          <div *ngIf="data.ORDER_PRICE!=0">{{data.ORDER_PRICE}} 원</div>
+          <div *ngIf="data.ORDER_PRICE==0">협의</div>
+        </td>
+      </tr>
+      <tr>
+        <td>{{data.ORDER_DEFAULT}}</td>
+        <td>{{data.ORDER_OPTION}}</td>
+        <td>{{data.ORDER_CREATE_DATE}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

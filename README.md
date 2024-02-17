@@ -10,8 +10,6 @@
 [https://cleanbox.shop](https://cleanbox.shop)
 ## **Skills**
 
----
-
 - **Framework** : Spring Framework , Angular+ , React
 - **Language** : JAVA , Javascript , Typescript
 - **Database** : Oracle
@@ -45,8 +43,6 @@
 세부적인 내용은 주요 기능 설명에서 한번 더 다루도록 하겠습니다.
 
 ## 주요 기능 설명
-
----
 
 ### 1. 무입력(No Input) 프로세스
 
@@ -123,7 +119,6 @@ chart.js를 사용하여 데이터를 시각화 하였습니다.
 
 클라우드 서버에 시스템을 구축하고 필요에 따라 기능들을 적용시켰습니다.
 
----
 ## 주요 화면
 
 ### 더클린박스 본사이트 일부 화면
@@ -138,7 +133,6 @@ chart.js를 사용하여 데이터를 시각화 하였습니다.
 
 ![업체](https://coolcleaner.co.kr/fileDownLoad/170813159105562626.jpg)
 
----
 
 ## 프로젝트 성과
 
@@ -162,6 +156,5 @@ chart.js를 사용하여 데이터를 시각화 하였습니다.
 2023.05 누적신청수 62,000건 돌파 / 누적 매출액 150억 돌파
 
 
-<span style="background:red; color:white">
-본 프로젝트의 Github 리포지토리는 플랫폼 시스템의 전체 소스중 극히 일부만 등록되어 있습니다.  
-</span>
+<br><br><br>
+**본 프로젝트의 Github 리포지토리는 플랫폼 시스템의 전체 소스중 극히 일부만 등록되어 있습니다.**
